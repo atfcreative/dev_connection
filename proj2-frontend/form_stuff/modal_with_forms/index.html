@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="modal-with-form.css">
+</head>
+<body>
+  <div id="modalLogin">
+  <!-- form 1 here -->
+  <form action="#0">
+
+  <div>
+    <input type="text" id="first_name" name="first_name" required placeholder="" />
+    <label for="first_name">First Name</label>
+    <div class="after"></div>
+  </div>
+
+  <div>
+    <input type="text" id="last_name" name="last_name" required placeholder="" />
+    <label for="last_name">Last Name</label>
+    <div class="after"></div>
+  </div>
+
+  <div>
+    <input type="email" id="email" name="email" required placeholder="" />
+    <label for="email">Email Address</label>
+    <div class="after"></div>
+    <div class="requirements">
+      Must be a valid email address.
+    </div>
+  </div>
+
+  <div>
+    <input type="password" id="password" name="password" required placeholder="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+    <label for="password">Password</label>
+    <div class="after"></div>
+    <div class="requirements">
+      Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+    </div>
+  </div>
+
+  <button type="submit">Sign Up!</button>
+<form><br/>
+  <small>We won’t share your data or spam you.<br/>
+<span class="privacy">Learn more about Dev Connect's privacy policy.</span></small>
+
+<!-- END LOGIN FORM -->
+  </div><!-- div #id modalLogin -->
+
+  <div id="modalRegister">
+  <!-- form 2 here -->
+
+  </div>
+
+
+<div id="wrap">
+
+ <!--  <nav> -->
+    <ul>
+        <li><a href="#" id="login">Login</a></li>
+        <li><a href="#" id="register">Register</a></li>
+    </ul>
+<!-- </nav> -->
+
+</div>
+
+
+<script type="text/javascript" src="modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+* {
+    margin-right: :0;
+    padding:0;
+    text-decoration:none;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Nunito", sans-serif;
+    -webkit-box-shadow: inset 0 0 300px 0 rgba(0,0,0,.35);
+    box-shadow: inset 0 0 300px 0 rgba(0,0,0,.35);
+    height: 100%;
+}
+
+ul {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+#wrap {
+    /*width:300px;*/
+    padding: 0px 0;
+    position: absolute;
+    top:20;
+    right:0;
+    margin:0px 0 0 0px;
+}
+
+
+#wrap a {
+    color:#000;
+    text-transform:uppercase;
+    -webkit-transition: .25s ease;
+            transition: .25s ease;
+}
+
+#modalLogin {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    top:50%;
+    left:50%;
+    margin:-200px 0 0 -175px;
+    background:#fff;
+    width:380px;
+    height:480px;
+    padding:20px;
+    -webkit-box-shadow:
+        0 0 125px 0 rgba(0,0,0,1),
+        0 0 10000px 500px rgba(0,0,0,.75);
+            box-shadow:
+        0 0 125px 0 rgba(0,0,0,1),
+        0 0 10000px 500px rgba(0,0,0,.75);
+    border-radius:5px;
+}
+
+/*=====FORM STUFF ====*/
+form {
+  width:100%;
+  margin: 0 auto;
+  /*filter: drop-shadow(0 0 4px lightgrey);*/
+}
+form > div {
+  position: relative;
+  background: white;
+  /*border-bottom: 1px solid #ccc;*/
+}
+form > div > label {
+  opacity: 0.3;
+  font-weight: bold;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+
+/*label {
+  position: absolute;
+  top: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}*/
+
+form > div > input[type="text"], form > div > input[type="email"], form > div > input[type="password"] {
+  width: 100%;
+  border: 0;
+  padding: 20px 10px 17px 20px;
+  background: rgba(255,255,255, 0.9);
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+}
+form > div > input[type="text"]:focus, form > div > input[type="email"]:focus, form > div > input[type="password"]:focus {
+  outline: 0;
+  background: white;
+}
+form > div > input[type="text"]:focus + label, form > div > input[type="email"]:focus + label, form > div > input[type="password"]:focus + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:valid, form > div > input[type="email"]:valid, form > div > input[type="password"]:valid {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 90% 20px;
+}
+form > div > input[type="text"]:valid + label, form > div > input[type="email"]:valid + label, form > div > input[type="password"]:valid + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+  background: pink;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements, form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements, form > div > input[type="password"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+  max-height: 200px;
+  padding: 0 10px 20px 20px;
+}
+form > div .requirements {
+  padding: 0 10px 0 20px;
+  color: #999;
+  max-height: 0;
+  transition: 0.28s;
+  overflow: hidden;
+  color: red;
+  font-style: italic;
+}
+
+.after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, teal 50%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.6s ease;
+}
+
+input:focus ~ {
+  border-bottom: 1px solid #ccc;
+}
+
+input:focus ~ .after {
+  background-position: 0 0;
+}
+
+form button {
+  font-size: 150%;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 0px 0 0px 0;
+  margin: 25px 0 0 0;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 40px;
+  padding: 12px 0;
+  filter: drop-shadow(0px 2px 3px grey);
+  transition: color .5s ease-in-out;
+}
+
+form button:hover {
+  background: #0054a6;
+  color: #fff;
+  filter: drop-shadow(0px 2px 3px grey);
+}
+
+form button:active {
+  background: #fff;
+  color: #0054a6;
+  filter: drop-shadow(0px 2px 3px grey);
+}
+
+small {
+  color: #ccc;
+}
+
+.privacy {
+  color: #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.privacy:hover {
+  color: #0054a6;
+  border-bottom: 1px solid #0054a6;
+}
+
+@media screen and(max-width: 450px){
+
+  #modalLogin {
+      display: none;
+      position: relative;
+      z-index: 1000;
+      text-align: center;
+      top:0;
+      left:0;
+      margin:00px 0 0 0px;
+      background:#fff;
+      width:80%;
+      padding:0px;
+      -webkit-box-shadow:
+          0 0 125px 0 rgba(0,0,0,1),
+          0 0 10000px 500px rgba(0,0,0,.75);
+              box-shadow:
+          0 0 125px 0 rgba(0,0,0,1),
+          0 0 10000px 500px rgba(0,0,0,.75);
+      border-radius:5px;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+}
